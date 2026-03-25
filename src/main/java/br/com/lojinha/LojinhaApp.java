@@ -15,3 +15,4 @@ public class LojinhaApp {
         System.out.println(meuProduto.nome);
     }
 }
+
