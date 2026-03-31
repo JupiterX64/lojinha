@@ -28,7 +28,11 @@ public class Produto {
     }
 
     public void setValor(double novoValor) {
-        this.valor = novoValor;
+        if (novoValor > 0) {
+            this.valor = novoValor;
+        } else {
+            throw new IllegalArgumentException("O valor não pode ser menor que 0!");
+        }
     }
 
     public String getTamanho() {
