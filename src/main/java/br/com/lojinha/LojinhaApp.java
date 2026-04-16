@@ -8,12 +8,10 @@ import java.util.List;
 
 public class LojinhaApp {
     public static void main(String[] args) {
-        Produto meuProduto = new Produto();
+        Produto meuProduto = new Produto("BK", Tamanho.MEDIO);
 
         meuProduto.setNome ("Playstation 5");
         meuProduto.setValor(55.00);
-        meuProduto.setMarca ("Sony");
-        meuProduto.setTamanho(Tamanho.GRANDE);
 
         List<String> itensInclusos = new ArrayList<>();
         itensInclusos.add("2 Controles");
@@ -24,6 +22,7 @@ public class LojinhaApp {
         System.out.println(meuProduto.getItensInclusos());
         System.out.println(meuProduto.getTamanho());
         System.out.println(meuProduto.getValor());
+        System.out.println(meuProduto.getMarca());
     }
 
 }
