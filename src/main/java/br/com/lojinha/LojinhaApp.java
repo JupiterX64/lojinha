@@ -17,18 +17,27 @@ public class LojinhaApp {
         List<ItemIncluso> itensInclusos = new ArrayList<>();
 
         ItemIncluso primeiroItemIncluso = new ItemIncluso("Controle", 2);
-        itensInclusos.add(primeiroItemIncluso); //1
+        itensInclusos.add(primeiroItemIncluso); //0
 
         ItemIncluso segundoItemIncluso = new ItemIncluso("Jogos", 3);
-        itensInclusos.add(segundoItemIncluso); //2
+        itensInclusos.add(segundoItemIncluso); //1
 
         ItemIncluso terceiroItemIncluso = new ItemIncluso("Cabos", 2);
-        itensInclusos.add(terceiroItemIncluso); //3
+        itensInclusos.add(terceiroItemIncluso); //2
 
-        System.out.println(meuProduto.getItensInclusos());
-        System.out.println(meuProduto.getTamanho());
-        System.out.println(meuProduto.getValor());
-        System.out.println(meuProduto.getMarca());
+        meuProduto.setItensInclusos(itensInclusos);
+
+
+
+        System.out.println(meuProduto.getItensInclusos().get(0).getNome());
+        System.out.println(meuProduto.getItensInclusos().get(0).getQuantidade());
+
+        System.out.println(meuProduto.getItensInclusos().get(1).getNome());
+        System.out.println(meuProduto.getItensInclusos().get(1).getQuantidade());
+
+        System.out.println(meuProduto.getItensInclusos().get(2).getNome());
+        System.out.println(meuProduto.getItensInclusos().get(2).getQuantidade());
+
     }
 
 }

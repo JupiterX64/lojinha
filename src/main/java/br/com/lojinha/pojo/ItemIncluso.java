@@ -5,7 +5,8 @@ public class ItemIncluso {
     private int quantidade;
 
     public ItemIncluso(String nomeInicial, int quantidadeInicial) {
-
+        this.nome = nomeInicial;
+        this.quantidade = quantidadeInicial;
     }
 
     public String getNome() {
