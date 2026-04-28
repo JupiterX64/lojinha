@@ -22,7 +22,7 @@ public class LojinhaApp {
         ItemIncluso segundoItemIncluso = new ItemIncluso("Jogos", 3);
         itensInclusos.add(segundoItemIncluso); //1
 
-        ItemIncluso terceiroItemIncluso = new ItemIncluso("Cabos", 2);
+        ItemIncluso terceiroItemIncluso = new ItemIncluso("Cabos de energia", 2);
         itensInclusos.add(terceiroItemIncluso); //2
 
         meuProduto.setItensInclusos(itensInclusos);
@@ -38,8 +38,13 @@ public class LojinhaApp {
         System.out.println(meuProduto.getItensInclusos().get(2).getNome());
         System.out.println(meuProduto.getItensInclusos().get(2).getQuantidade());
 
-    }
+        for (ItemIncluso itemAtual : meuProduto.getItensInclusos()) {
+            System.out.println(itemAtual.getNome());
+            System.out.println(itemAtual.getQuantidade());
+        }
 
+        System.out.println("Acabaram e os itens");
+    }
 }
 
 
