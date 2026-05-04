@@ -3,6 +3,8 @@ package br.com.lojinha;
 import br.com.lojinha.enums.Tamanho;
 import br.com.lojinha.pojo.ItemIncluso;
 import br.com.lojinha.pojo.Produto;
+import br.com.lojinha.pojo.ProdutoInternacional;
+import br.com.lojinha.pojo.ProdutoNacional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ public class LojinhaApp {
     public static void main(String[] args) {
         Produto meuProduto = new Produto("BK", Tamanho.MEDIO);
 
-        meuProduto.setNome ("Playstation 5");
+        meuProduto.setNome("Playstation 5");
         meuProduto.setValor(55.00);
 
         List<ItemIncluso> itensInclusos = new ArrayList<>();
@@ -26,7 +28,6 @@ public class LojinhaApp {
         itensInclusos.add(terceiroItemIncluso); //2
 
         meuProduto.setItensInclusos(itensInclusos);
-
 
 
         System.out.println(meuProduto.getItensInclusos().get(0).getNome());
@@ -44,6 +45,14 @@ public class LojinhaApp {
         }
 
         System.out.println("Acabaram e os itens");
+
+        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Sony", Tamanho.MEDIO);
+        meuProdutoNacional.setImpostoNacional(0.55789);
+        System.out.println(meuProdutoNacional.getImpostoNacional());
+
+        ProdutoInternacional meuprodutoInternacional = new ProdutoInternacional("Microsoft", Tamanho.GRANDE);
+        meuprodutoInternacional.setTaxaDeImportacao(0.22525);
+        System.out.println(meuprodutoInternacional.getTaxaDeImportacao());
     }
 }
 
