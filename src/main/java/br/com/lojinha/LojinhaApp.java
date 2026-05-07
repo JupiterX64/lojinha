@@ -50,9 +50,11 @@ public class LojinhaApp {
         meuProdutoNacional.setImpostoNacional(0.55789);
         System.out.println(meuProdutoNacional.getImpostoNacional());
 
-        ProdutoInternacional meuprodutoInternacional = new ProdutoInternacional("Microsoft", Tamanho.GRANDE);
-        meuprodutoInternacional.setTaxaDeImportacao(0.22525);
-        System.out.println(meuprodutoInternacional.getTaxaDeImportacao());
+        ProdutoInternacional meuProdutoInternacional = new ProdutoInternacional("Microsoft", Tamanho.GRANDE);
+        meuProdutoInternacional.setTaxaDeImportacao(0.22525);
+        meuProdutoInternacional.setValor(-99);
+        System.out.println(meuProdutoInternacional.getTaxaDeImportacao());
+        System.out.println(meuProdutoInternacional.getValor());
     }
 }
 
